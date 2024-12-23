@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="4">
+    <title>Animation</title>
+    <style>
+        div{
+           height: 150px;
+           width: 150px;
+           border-radius: 20px;
+           border:2px solid black;
+           background-color: blue;
+           transition-duration: 2s;
+        }
+        div:hover{
+            width:300px;
+            background-color: greenyellow;
+            transition-duration: 3s;
+            transition-delay: 2s;
+            transition-timing-function:ease-out;
+             /* transform: translate(200px,150px); */
+            /* transform: skew(20deg); */
+            /* transform: scale(1); */
+            transform: rotate(360deg);
+        }
+        h2{
+            width: 100px;
+            height: 100px;
+            border: 1px solid rgb(243, 8, 8);
+            background-color:yellow;
+            position: relative;
+            animation-name: css;
+            animation-duration:4s;
+            animation-delay: 1s;
+            animation-timing-function:ease;
+            animation-iteration-count:1;
+            animation-duration: reverse;
+        }
+        @keyframes css{
+            0%{
+                top:0;
+                left:0;
+            }
+            50%{
+                top: 150px;
+                border-radius: 25px;
+                background-color:rgb(8, 236, 103);
+                transform: (360deg);
+            }
+            80%{
+                left:200px;
+                background-color:red;
+                border-radius: 50px;
+            }
+            100%{
+                top: 0px;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <h2></h2>
+</body>
+</html>
